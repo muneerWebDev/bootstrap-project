@@ -1,0 +1,233 @@
+:root {
+    @include media-breakpoint-down(xl) {
+        font-size: 52.6%;
+    }
+}
+
+html,
+body {
+    letter-spacing: 0.1em;
+    max-width: 100vw;
+    overflow: hidden;
+    overflow-y: overlay;
+}
+
+body{
+    overflow: hidden;
+    &.loaded{
+        overflow-y: overlay;
+    }
+}
+
+main {
+    min-height: calc(100vh - var(--siteFooterHeight));
+}
+
+.row {
+    --bs-gutter-x: 3rem;
+}
+
+.btn {
+    text-transform: uppercase;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    padding: 15px 35px;
+}
+
+h2,
+.h2 {
+    .big-text {
+        font-size: 7rem;
+        display: block;
+        color: $primary;
+    }
+
+    & + .paragraph-style {
+        padding: 4rem 0;
+    }
+
+    & + p {
+        margin-top: 3rem;
+        &:last-child {
+            margin-bottom: 5.5rem;
+        }
+    }
+}
+
+h4,
+.h4 {
+    & + .paragraph-style,
+    & + p {
+        margin-top: 3rem;
+    }
+}
+
+h6,
+.h6 {
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    letter-spacing: 0.4em;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    &.stencil-link {
+        text-transform: uppercase;
+        font-weight: 400;
+        &::before {
+            content: "";
+            width: 12.5rem;
+            margin-right: 3rem;
+            height: 1px;
+            background: $primary;
+            display: inline-block;
+            margin-bottom: 0.2em;
+            transition: 0.3s;
+
+            @include media-breakpoint-down(sm){
+                width: 9rem;
+            }
+        }
+        &:hover {
+            &::before {
+                width: 13.5rem;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    &[data-title] {
+        display: inline-flex;
+        align-items: flex-end;
+        text-transform: uppercase;
+        font-weight: 400;
+        white-space: nowrap;
+        &::before {
+            content: attr(data-title);
+            color: $gray-light;
+            letter-spacing: 0.5em;
+            font-weight: $font-weight-base;
+            border: 1px solid $primary;
+            border-width: 0 0 1px 0;
+            display: inline-block;
+            padding-right: 10rem;
+            font-size: $font-size-sm;
+            padding-bottom: 1.3rem;
+            text-indent: -0.5em;
+            margin: 0 3rem 0.5rem 0.5em;
+            transition: 0.3s;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            &::before {
+                padding: 0;
+                margin: 0 0 1rem;
+                text-indent: 0;
+            }
+        }
+
+        &:hover {
+            &::before {
+                text-indent: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+p {
+    font-weight: 400;
+    letter-spacing: normal;
+    list-style: none;
+    line-height: 1.8;
+    font-size: 1.5rem;
+
+    & + .stencil-link {
+        margin-top: 2.5rem;
+    }
+
+    & + .btn {
+        margin-top: 2rem;
+    }
+}
+
+.paragraph-style {
+    & + .stencil-link {
+        margin-top: 2.5rem;
+    }
+    p {
+        word-break: break-all;
+        hyphens: auto;
+    }
+
+    .first-word {
+        font-size: $h4-font-size;
+        line-height: 1;
+    }
+}
+
+.video-play-btn {
+    font-size: $h1-font-size;
+    transition: 0.3s;
+    border-radius: 50%;
+    padding: 0;
+    line-height: normal;
+    &:hover {
+        box-shadow: 0 0 11px 3px $primary-transparent;
+    }
+    img {
+        width: 8rem;
+    }
+
+    & + h6,
+    & + .h6 {
+        margin-top: 3rem;
+    }
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-small {
+    font-size: $small-font-size;
+}
+
+.dark {
+    background-color: $secondary;
+    background-size: cover;
+
+    *:not(p):not(.first-word):not(.btn) {
+        color: $primary;
+    }
+
+    p {
+        color: $white;
+    }
+
+    .big-text {
+        color: $white;
+    }
+}
+
+.light {
+    background: $bg-light;
+}
+
+.stars {
+    color: $gray-light;
+    .active {
+        color: $primary;
+    }
+}

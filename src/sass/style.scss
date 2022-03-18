@@ -1,0 +1,20 @@
+// fonts 
+@import '../fonts/BodoniModa/stylesheet';
+@import '../fonts/Roboto/stylesheet';
+// @import '../fonts/iconmoon/style';
+
+//variables
+@import 'custom-variables';
+
+// plugins
+@import 'plugins/fontawesome';
+@import 'plugins/bootstrap';
+@import 'plugins/slick';
+@import 'plugins/lightbox';
+
+//general styles
+@import 'animations';
+@import 'mixins';
+@import 'elements';
+@import 'global';
+@import 'sections';

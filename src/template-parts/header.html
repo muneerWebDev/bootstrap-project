@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="Offering an array of facilities like a vast swimming pool, complimentary WiFi, multicuisine restaurant, AC rooms, Business Centre, Parking area, Heritage">
+    <meta name="description" content="Heritage Methanam Resort, Kochi (Cochin), Kerala Website">
+    <meta name="author" content="Muhammed Muneer (muneerwebdev)">
+    <title>Heritage Methanam</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon image_src" href="images/favicon.png">
+    <!--build:css css/main.min.css -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <header id="siteHeader">
+
+        <nav class="navbar navbar-expand-xl">
+            <div class="container align-items-start  text-uppercase">
+
+                <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" width="120" height="30" alt="logo"
+                        class="img-fluid"></a>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sitenavbar" aria-controls="sitenavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse flex-grow-0" id="sitenavbar">
+
+                    <ul class="navbar-nav pt-5 mt-2">
+                        <li class="nav-item 
+                        @@if (nav === 'Home') {
+                            active
+                          }">
+                            <a class="nav-link" href="javaScript:void(0);">Home</a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'About') {
+                            active
+                          }">
+                            <a class="nav-link" href="javaScript:void(0);">About us<span class="icon-book"></span></a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'Facilities') {
+                            active
+                          }
+                          ">
+                            <a class="nav-link" href="javaScript:void(0);">Facilities</a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'Accommodation') {
+                            active
+                          }
+                          ">
+                            <a class="nav-link" href="javaScript:void(0);">Accommodation</a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'Dining') {
+                            active
+                          }
+                          ">
+                            <a class="nav-link" href="javaScript:void(0);">Dining</a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'Meetings') {
+                            active
+                          }
+                          ">
+                            <a class="nav-link" href="javaScript:void(0);">Meetings & events</a>
+                        </li>
+                        <li class="nav-item
+                        @@if (nav === 'Contact') {
+                            active
+                          }
+                          ">
+                            <a class="nav-link" href="javaScript:void(0);"> Contact us</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn-primary d-xl-none">RESERVATION</a>
+                </div>
+
+                <a href="" class="btn btn-primary d-none d-xl-block">RESERVATION</a>
+
+            </div>
+        </nav>
+
+    </header>

@@ -1,0 +1,83 @@
+// font family
+$BodoniModa: "Bodoni Moda", sans-serif;
+$Roboto: "Roboto", sans-serif;
+
+/*** overriding bootstrap variables  **/
+
+//typography
+$font-weight-regular: 300;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+$font-family-base: $Roboto;
+
+//colors
+$black: #000;
+$white: #fff;
+$blue: #10a6e8;
+$gray: #192b3e;
+$gray-light: rgba(0, 0, 0, 0.4);
+$bg-light: #ebf7fd;
+$border-color: #808080;
+$light-box-shadow: rgba(167, 167, 167, 0.42);
+
+$pink: #cf54b1;
+$purple: #723193;
+$green: #6aca66;
+
+$primary: $blue;
+$secondary: $gray;
+
+$body-color: $gray;
+$link-color: $primary;
+$input-group-addon-bg: transparent;
+$input-group-addon-border-color: transparent;
+
+$primary-transparent: transparentize($primary, 0.5);
+$pink-transparent: transparentize($pink, 0.5);
+$purple-transparent: transparentize($purple, 0.5);
+
+$nav-link-color: $white;
+$dropdown-link-active-color: $primary;
+$navbar-padding-y: 1.3rem;
+
+$headings-color: $secondary;
+$headings-font-family: $BodoniModa;
+$headings-font-weight: $font-weight-semibold;
+$font-weight-base: $font-weight-regular;
+
+//font sizes
+$enable-rfs: false;
+$font-size-root: 62.5%;
+$small-font-size: 1.1rem;
+$font-size-base: 1.4rem;
+$font-size-medium: 1.6rem;
+$font-size-large: 1.8rem;
+
+$h1-font-size: 5.6rem;
+$h2-font-size: 4rem;
+$h3-font-size: 3.4rem;
+$h4-font-size: 3rem;
+$h6-font-size: $font-size-base;
+
+// buttons
+$btn-border-radius: 0;
+$btn-font-weight: $font-weight-base;
+
+//container-width
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1260px,
+  xxl: 1260px,
+);
+
+//grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1325px,
+);
