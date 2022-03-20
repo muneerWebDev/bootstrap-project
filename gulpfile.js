@@ -51,8 +51,8 @@ var paths = {
         dest: './build/fonts'
     },
     assets: {
-        src: './src/assets/**/*',
-        dest: './build/assets'
+        src: './src/webfonts/**/*',
+        dest: './build/webfonts'
     }
 }
 
@@ -181,7 +181,7 @@ gulp.task('assets', function () {
 
 gulp.task('assetsToDist', function () {
     return gulp.src(paths.assets.src)
-        .pipe(gulp.dest('./dist/assets/'))
+        .pipe(gulp.dest('./dist/webfonts/'))
 });
 
 //copy images
@@ -241,14 +241,6 @@ gulp.task('useref', function () {
         .pipe(gulp.dest('dist'));
 });
 
-//build
-gulp.task('build', gulp.series(gulp.parallel('main-sass', 'htmlConcat', 'jsOptimize', 'fonts', 'assets','images')));
-
-//dist
-gulp.task('dist', gulp.series(gulp.parallel('sass', 'imagesToDist', 'fontsToDist' , 'assetsToDist', 'htmlConcat','jsOptimize', 'useref')));
-
-
-
 /*
 //before gulp dist 
 //
@@ -258,3 +250,11 @@ gulp jsOptimize
 gulp assets
 gulp images
 */
+
+//build
+gulp.task('build', gulp.series(gulp.parallel('main-sass', 'htmlConcat', 'jsOptimize', 'fonts', 'assets','images')));
+
+//dist
+gulp.task('dist', gulp.series(gulp.parallel('sass', 'imagesToDist', 'fontsToDist' , 'assetsToDist', 'htmlConcat','jsOptimize', 'useref')));
+
+
